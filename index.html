@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Piskel-clone</title>
+  <script src="https://kit.fontawesome.com/de719dbc90.js"></script>
+<link href="main.css" rel="stylesheet"></head>
+<body>
+  <div class="header">
+      <img src="images/logo261cc38cf12d97483bb904ace81a7f03.png" class="piskel-logo">
+      <span>CLONE</span>
+  </div>
+  <div class=content>
+      <div class="tools-wrapper">
+          <div class="pen-size-container size-picker-container" rel="tooltip">
+          <div class="pen-size-option size-picker-option" data-size="1"></div>
+          <div class="pen-size-option size-picker-option" data-size="2"></div>
+          <div class="pen-size-option size-picker-option" data-size="3"></div>
+          <div class="pen-size-option size-picker-option" data-size="4"></div>
+        </div>
+        <ul class="tools-list" id="tools-list">
+          <li class="tool pen active-tool" id="pen-tool"></li>
+          <li class="tool eraser"></li>
+          <li class="tool bucket"></li>
+          <li class="tool pipette"></li>
+          <li class="tool rectangle"></li>
+          <li class="tool circle"></li>
+        </ul>
+        <div class="color-picker">
+          <input class="color_picker-item secondary-color" type="color" id="color-second" value="#000000">
+          <input class="color_picker-item main-color" type="color" id="color-main" value="#00ff00">
+          <div class="swap-colors" id="swap-colors"></div>
+        </div>
+
+      </div>
+      <div class="frames-wrapper">
+        <div id="frames" class="frames-scroller">
+          <div id="new_frame" class="add-frame-action">
+              <div class="add-frame-action-icon"></div>
+              <div class="label">Add new frame</div>
+          </div>
+        </div>
+      </div>
+      <div class="drawing">
+        <div id="cursor"></div>
+        <canvas id="main_canv" class="main_canv" width="768" height="768"></canvas>
+      </div>
+      <div class="right-column">
+        <div class="preview" id="preview">
+            <div id="fullScreen" class="fullScreen"></div>
+        </div>
+        <div class="frame_rate-wrapper" id="frame_rate-wrapper">
+          <span id="display-fps" class="display-fps">10</span>
+          <input type="range" class="fps_range" id="fps" min="0" max="24" step="1" />
+        </div>
+        <div class="settings">
+        <select name="canvas-size" id="canvas-size">
+          <option class="option" value="32" id="size">32x32</option>
+          <option class="option" value="64" id="size">64x64</option>
+          <option class="option" value="128" id="size">128x128</option>
+        </select>
+      </div>
+      <button class="saveButton" id="saveButton">save .gif</button>
+      <div id="info" class="cursor-info"></div>
+      </div>
+
+  </div>
+
+<script type="text/javascript" src="app.bundle.js"></script></body>
+</html>
